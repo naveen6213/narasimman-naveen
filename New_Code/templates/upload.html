@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Status</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" /> 
+</head>
+<body bgcolor="orange">
+    <div style="text-align: center;">
+        <img src="{{url_for('static', filename='logo.png')}}" alt="logo" class="center"/>
+      </div>
+<h2 align="center">{{status}} !</h2> <br>
+  <h2 align="center">Click the button after few seconds to check your results</h2><br>
+  <a href="/result?guids={{guids}}" class="checkresult">Check Results</a>
+</form>
+</body>
+</html>

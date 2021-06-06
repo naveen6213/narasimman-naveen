@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <a href="/logout" class="logout">Log out</a>
+  <div style="text-align: center;">
+    <img src="{{url_for('static', filename='logo.png')}}" alt="logo" class="center" />
+  </div>
+  <h2>Image Analysis </h2><br>
+
+  <div class="login">
+    <h1 align="center"></h1>
+    
+    <form action="/file-upload" method="POST" enctype="multipart/form-data">
+      <label><b>Click the button to select the file
+        </b>
+      </label>
+      <input type="file" name="file" class="btn" />
+      <input type="submit" />
+    </form>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+</body>
+</html>

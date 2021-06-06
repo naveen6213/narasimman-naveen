@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="{{url_for('static', filename='logo.png')}}" alt="logo" class="center" />
+    </div>
+    <h2>MantisShrimp Analysis</h2><br>
+    <div class="login">
+        <form id='login' action="/home-page" method="post">
+            <label><b>User Name
+                </b>
+            </label>
+            <input type="text" name="username" id="username" placeholder="Username">
+            <br><br>
+            <label><b>Password
+                </b>
+            </label>
+            <input type="Password" name="password" id="password" placeholder="Password">
+            <br><br>
+            <input type="submit" name="log" id="log" value="Log In">
+        </form>
+    </div>
+    <h2>{{info}}</h2>
+</body>
+</html>
